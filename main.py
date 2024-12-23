@@ -46,17 +46,17 @@ while game_over != True:
     screen.fill(background_color)
 
     hunger_color = set_color(tamagotchi.hunger)
-    pygame.draw.rect(screen, BLACK, pygame.Rect(50, 50, tamagotchi.hunger * 2, 20))
-    hunger_text = FONT.render("Hunger",True,BLACK)
+    pygame.draw.rect(screen, BLACK, pygame.Rect(50, 50, tamagotchi.hunger * 2, 20))  # zamienić "BLACK" na "hunger_color"
+    hunger_text = FONT.render("Hunger", True, BLACK)
     screen.blit(hunger_text, (50, 20))
 
-    hapiness_color = set_color(tamagotchi.happiness)
-    pygame.draw.rect(screen, BLACK, pygame.Rect(50, 100, tamagotchi.happiness * 2, 20))
-    happiness_text = FONT.render("Happiness",True,BLACK)
+    happiness_color = set_color(tamagotchi.happiness)
+    pygame.draw.rect(screen, BLACK, pygame.Rect(50, 100, tamagotchi.happiness * 2, 20))  # zamienić "BLACK" na "happiness_color"
+    happiness_text = FONT.render("Happiness", True, BLACK)
     screen.blit(happiness_text, (50, 70))
 
-    feed_btn = pygame.Rect(225, 300, 150, 50)
-    pet_btn = pygame.Rect(25, 300, 150, 50)
+    feed_btn = pygame.Rect(225, 300, 150, 50)  # wpisać 25 zamiast 225
+    pet_btn = pygame.Rect(25, 300, 150, 50)  # wpisać 225 zamiast 25
     pygame.draw.rect(screen, WHITE, feed_btn, 3)
     pygame.draw.rect(screen, WHITE, pet_btn, 3)
 
@@ -65,7 +65,6 @@ while game_over != True:
 
     screen.blit(feed_text, (50, 300))
     screen.blit(pet_text, (250, 300))
-
 
 
 pygame.quit()
